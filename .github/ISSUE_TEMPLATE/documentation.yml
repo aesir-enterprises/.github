@@ -1,0 +1,49 @@
+name: Documentation change
+description: Propose a correction, clarification, or new document
+title: "[Docs] "
+labels: []
+body:
+  - type: textarea
+    id: change
+    attributes:
+      label: Proposed change
+      description: What should be added, corrected, or clarified?
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason
+      description: Why is the change needed?
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Authoritative source
+      description: Identify the source used to verify the information.
+  - type: dropdown
+    id: knowledge
+    attributes:
+      label: Knowledge status
+      options:
+        - Current fact
+        - Approved plan
+        - Proposed idea
+        - Assumption
+        - Needs validation
+        - Deprecation or archive
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Related documents or repositories
+      description: List links or paths that may also require updates.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety confirmation
+      options:
+        - label: This issue contains no secrets, personal data, or confidential information.
+          required: true
